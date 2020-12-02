@@ -9,36 +9,26 @@ import speech_recognition as sr
 import webbrowser
 import os
 from gtts import gTTS
+from speak import *
+from listen import *
+from wikipedia import *
+from movie import *
+from youtube import *
 
-#for lisa voice 
-def speak(audioString):
-    print(audioString)
-    tts = gTTS(text=audioString, lang='en')
-    tts.save("audio.mp3")
-    os.system(" audio.mp3")
 
-#for record from user
-def recordAudio():
-    # Record Audio
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("Say something!")
-        audio = r.listen(source)
-
-    # Speech recognition using Google Speech Recognition
-    data = ""
-    try:
-        # Uses the default API key
-        # To use another API key: `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
-        data = r.recognize_google(audio)
-        print("You said: " + data)
-    except sr.UnknownValueError:
-        print("Google Speech Recognition could not understand audio")
-    except sr.RequestError as e:
-        print("Could not request results from Google Speech Recognition service; {0}".format(e))
-
-    return data
+def lisa(data):
+    if "how are you" in data:
+        speak("I'm fine")
+    if "wikipedia" in data:
+        lisa = listen
+        lisa.recordAudio()
+        
+        lisa.get_info()
+        
 
 # initialization
-
-
+speak("Hai, what can i do for you?")
+while 1:
+    data = listen
+    data.recordAudio()
+    lisa(data)

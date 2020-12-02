@@ -37,6 +37,6 @@ class movie():
         engine.runAndWait()
         
         
-lisa = movie()
-lisa.movie_review("hello world")
+#lisa = movie()
+#lisa.movie_review("hello world")
         
