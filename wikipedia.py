@@ -36,6 +36,7 @@ class info():
         engine.runAndWait()
         
         
+        
 
-#lisa = info()
-#lisa.get_info("indonesia")
+lisa = info()
+lisa.get_info("elon musk")
