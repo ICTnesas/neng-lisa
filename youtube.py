@@ -28,7 +28,7 @@ class youtube():
         engine.say("playing first video for " + name)
         engine.runAndWait()
         
-lisa = youtube()
-lisa.play("python")
+#lisa = youtube()
+#lisa.play("ariana")
 
 

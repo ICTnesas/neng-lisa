@@ -6,9 +6,7 @@ Created on Wed Dec  2 11:01:56 2020
 """
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import pyttsx3 as p
-import os
 
 
 class info():
@@ -23,6 +21,7 @@ class info():
         self.query = query
         self.driver.get(url="https://www.wikipedia.org/")
         search = self.driver.find_element_by_xpath('//*[@id="searchInput"]')
+        #find = self.driver.
         search.click()
         search.send_keys(query)
         
@@ -35,8 +34,5 @@ class info():
         engine.say(readable_text)
         engine.runAndWait()
         
-        
-        
-
-lisa = info()
-lisa.get_info("elon musk")
+#lisa = info()
+#lisa.get_info("elon musk")

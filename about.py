@@ -6,7 +6,6 @@ Created on Wed Dec  2 14:48:31 2020
 """
 
 import pyttsx3 as p
-from speak import *
 
 engine = p.init()
 
@@ -18,9 +17,8 @@ caracter = {"Adrian" : "He is very lazy, that's was why he create me",
 def mean(name):
     if name in caracter:
         res = caracter[name]
-        #engine.say(res)
-        #engine.runAndWait()
-        speak(res)
+        engine.say(res)
+        engine.runAndWait()
        
         
 
