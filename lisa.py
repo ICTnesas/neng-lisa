@@ -59,7 +59,7 @@ r3 = sr.Recognizer()
 if "information" in instruction:
     engine.say("information about what")
     engine.runAndWait()
-    with sr.Microphone() as source1:
+    with sr.Microphone() as source1: 
         audio2 = r3.listen(source1)
         try:
             information = r3.recognize_google(audio2)
